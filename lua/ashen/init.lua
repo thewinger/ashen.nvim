@@ -10,6 +10,7 @@ M.load = function()
   vim.o.termguicolors = true
   vim.api.nvim_command(string.format("set background=%s", "dark"))
   require("ashen.theme").setup()
+  require("ashen.plugins")
 end
 
 M.setup = function(args)
