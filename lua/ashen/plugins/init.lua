@@ -1,17 +1,12 @@
 local util = require("ashen.util")
 local M = {}
-local _plugins = {
-  require("ashen.plugins.cmp"),
-  require("ashen.plugins.lualine"),
-  require("ashen.plugins.flash"),
-  require("ashen.plugins.telescope"),
-}
 local default_plugins = {
   "cmp",
   "lualine",
   "flash",
   "telescope",
   "obsidian",
+  "minimap",
 }
 
 local function get_plugins(plugins)
