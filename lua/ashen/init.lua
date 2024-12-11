@@ -10,12 +10,12 @@ M.load = function()
   vim.o.termguicolors = true
   vim.api.nvim_command(string.format("set background=%s", "dark"))
   require("ashen.theme").setup()
-  require("ashen.plugins")
+  require("ashen.plugins").setup()
 end
 
 M.setup = function(args)
   M.config = vim.tbl_deep_extend("force", M.config, args or {})
-  M.load()
+  -- M.load()
 end
 
 return M

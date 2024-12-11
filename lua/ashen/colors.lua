@@ -1,15 +1,13 @@
----@class Colors
 local M = {}
 
--- @class AshenColorscheme
 M.colors = {
   background = "#121212",
   red_light = "#BD4C4C",
   red = "#933737",
   red_bright = "#AC2020",
+  red_dark = "#762C2C",
   orange = "#ff7700",
   orange_dark = "#79491d",
-  diff_delete = "#AC2020",
   blue = "#379393",
   blue_dark = "#215858",
   a_0 = "#ffffff",
