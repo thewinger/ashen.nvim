@@ -22,4 +22,4 @@ M.colors = {
   a_9 = "#212121",
 }
 
-return M
+return M.colors

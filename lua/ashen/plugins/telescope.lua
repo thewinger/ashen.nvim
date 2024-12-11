@@ -1,5 +1,5 @@
 local M = {}
-local c = require("ashen.colors").colors
+local c = require("ashen.colors")
 M.map = {
 
   TelescopeTitle = { c.a_2 },

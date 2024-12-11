@@ -1,5 +1,5 @@
 local M = {}
-local c = require("ashen.colors").colors
+local c = require("ashen.colors")
 M.map = {
   ["lualine_b_diagnostics_error_normal"] = c.red_bright,
   ["lualine_b_diagnostics_error_insert"] = c.red_bright,
