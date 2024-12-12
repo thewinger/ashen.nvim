@@ -3,6 +3,20 @@ local M = {}
 local util = require("ashen.util")
 local c = require("ashen.colors")
 
+---@alias AshenHighlight [AshenKey?, AshenKey?, AshenTextStyle?] # Defines a highlight group.
+
+---@alias TextStyle string
+---| 'bold'
+---| 'italic'
+---| 'underline'
+---| 'undercurl'
+
+---@alias AshenTextStyle table<TextStyle, boolean> # Defines the text style of an AshenHighlight.
+
+---@alias HighlightName string # The name of a Neovim highlight group.
+
+---@class AshenMap
+---@field [HighlightName] AshenHighlight
 local map = {
   AshenReverse = { c.a_0, c.red },
   AshenRed = { c.red },
