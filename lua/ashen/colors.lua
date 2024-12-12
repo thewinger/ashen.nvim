@@ -1,34 +1,37 @@
 local M = {}
 
 ---@alias AshenColor string
----| 'background'
----| 'red_bright'
----| 'red_dark'
----| 'red_light'
----| 'red'
----| 'orange'
----| 'orange_light'
----| 'orange_dark'
----| 'blue'
----| 'blue_dark'
+---| "red_flame" # Brightest, most intense red
+---| "red_kindling" # Light, warm red
+---| "red_glowing" # Slightly deeper glowing red
+---| "red_burnt_crimson" # Muted crimson red
+---| "red_ember" # Deep, smoldering ember red
+---| "red_brick" # Muted, earthy brick red
+---| "red_deep_ember" # Dark, deep ember red
+---| "red_ashen" # Cool, ashen red
+---| "orange_glow" # Bright, glowing orange
+---| "orange_blaze" # Vibrant blaze orange
+---| "orange_smolder" # Dark, smoldering orange
+---| "orange_golden" # Vibrant golden tone
+---| "blue" # Muted teal, soft and unobtrusive
+---| "blue_dark" # Dark teal
+---| "background" # Dark background
+---| "g_0" # Greyscale, [0 -> 10] [bright -> dark]
+---| "g_1" # Greyscale, [0 -> 10] [bright -> dark]
+---| "g_2" # Greyscale, [0 -> 10] [bright -> dark]
+---| "g_3" # Greyscale, [0 -> 10] [bright -> dark]
+---| "g_4" # Greyscale, [0 -> 10] [bright -> dark]
+---| "g_5" # Greyscale, [0 -> 10] [bright -> dark]
+---| "g_6" # Greyscale, [0 -> 10] [bright -> dark]
+---| "g_7" # Greyscale, [0 -> 10] [bright -> dark]
+---| "g_8" # Greyscale, [0 -> 10] [bright -> dark]
+---| "g_9" # Greyscale, [0 -> 10] [bright -> dark]
+---| "g_10" # Greyscale, [0 -> 10] [bright -> dark]
 
----@alias AshenGray string
----| 'g_0'
----| 'g_1'
----| 'g_2'
----| 'g_3'
----| 'g_4'
----| 'g_5'
----| 'g_6'
----| 'g_7'
----| 'g_8'
----| 'g_9'
-
----@alias AshenKey AshenColor|AshenGray
 ---@alias HexCode string
 
 ---@class AshenPalette
----@field [AshenKey] HexCode
+---@field [AshenColor] HexCode
 M.colors = {
   red_flame = "#C53030", -- Brightest, most intense red
   red_kindling = "#BD4C4C", -- Light, warm red
