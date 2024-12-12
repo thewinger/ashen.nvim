@@ -17,13 +17,13 @@ M.map = {
   ["lualine_b_diagnostics_warn_terminal"] = c.orange,
   ["lualine_b_diagnostics_warn_inactive"] = c.orange,
 
-  ["lualine_b_diagnostics_info_normal"] = c.a_2,
-  ["lualine_b_diagnostics_info_insert"] = c.a_2,
-  ["lualine_b_diagnostics_info_visual"] = c.a_2,
-  ["lualine_b_diagnostics_info_replace"] = c.a_2,
-  ["lualine_b_diagnostics_info_command"] = c.a_2,
-  ["lualine_b_diagnostics_info_terminal"] = c.a_2,
-  ["lualine_b_diagnostics_info_inactive"] = c.a_2,
+  ["lualine_b_diagnostics_info_normal"] = c.g_2,
+  ["lualine_b_diagnostics_info_insert"] = c.g_2,
+  ["lualine_b_diagnostics_info_visual"] = c.g_2,
+  ["lualine_b_diagnostics_info_replace"] = c.g_2,
+  ["lualine_b_diagnostics_info_command"] = c.g_2,
+  ["lualine_b_diagnostics_info_terminal"] = c.g_2,
+  ["lualine_b_diagnostics_info_inactive"] = c.g_2,
 
   ["lualine_b_diagnostics_hint_normal"] = c.g_3,
   ["lualine_b_diagnostics_hint_insert"] = c.g_3,
@@ -63,7 +63,7 @@ M.link = {
 M.theme = {
 
   normal = {
-    a = { fg = c.a_2, bg = c.g_7 },
+    a = { fg = c.g_2, bg = c.g_7 },
     b = { fg = c.g_3, bg = c.g_8 },
     c = { fg = c.g_3, bg = c.g_9 },
   },
