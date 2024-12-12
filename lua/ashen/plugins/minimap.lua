@@ -2,8 +2,8 @@ local M = {}
 local c = require("ashen.colors")
 
 M.map = {
-  AshenMinimapCursor = { c.red_light, c.a_9 },
-  AshenMinimapRange = { c.red, c.background },
+  AshenMinimapCursor = { c.red_kindling, c.g_9 },
+  AshenMinimapRange = { c.red_ember, c.background },
   -- TODO: Add colors for the git colors
 }
 vim.g.minimap_range_color = "AshenMinimapRange"

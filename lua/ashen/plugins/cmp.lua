@@ -2,8 +2,8 @@ local M = {}
 local c = require("ashen.colors")
 
 M.map = {
-  CmpItemKind = { c.a_6 },
-  CmpDocumentation = { nil, c.a_9 },
+  CmpItemKind = { c.g_6 },
+  CmpDocumentation = { nil, c.g_9 },
 }
 
 -- Courtesy of nvim-noirbuddy:

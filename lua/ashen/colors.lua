@@ -13,16 +13,16 @@ local M = {}
 ---| 'blue_dark'
 
 ---@alias AshenGray string
----| 'a_0'
----| 'a_1'
----| 'a_2'
----| 'a_3'
----| 'a_4'
----| 'a_5'
----| 'a_6'
----| 'a_7'
----| 'a_8'
----| 'a_9'
+---| 'g_0'
+---| 'g_1'
+---| 'g_2'
+---| 'g_3'
+---| 'g_4'
+---| 'g_5'
+---| 'g_6'
+---| 'g_7'
+---| 'g_8'
+---| 'g_9'
 
 ---@alias AshenKey AshenColor|AshenGray
 ---@alias HexCode string
@@ -30,25 +30,30 @@ local M = {}
 ---@class AshenPalette
 ---@field [AshenKey] HexCode
 M.colors = {
-  red_bright = "#AC2020",
-  red_dark = "#762C2C",
-  orange = "#ff7700",
-  orange_dark = "#79491d",
-  blue = "#379393",
-  blue_dark = "#215858",
+  red_flame = "#D63031", -- Brightest, most intense red
+  red_kindling = "#BD4C4C", -- Light, warm red
+  red_glowing = "#C25757", -- Slightly deeper glowing red
+  rud_burnt_crimson = "#A84848", -- Muted crimson red
+  red_ember = "#933737", -- Deep, smoldering ember red
+  red_brick = "#853D3D", -- Muted, earthy brick red
+  red_deep_ember = "#7A2E2E", -- Dark, deep ember red
+  red_ashen = "#6F2929", -- Cool, ashen red
+  orange_glow = "#D87C4A", -- Bright, glowing orange
+  orange_blaze = "#C4693D", -- Vibrant blaze orange
+  orange_smolder = "#B25830", -- Dark, smoldering orange
+  blue = "#3A6E6E", -- Muted teal, soft and unobtrusive
+  blue_dark = "#1A3F3F", -- Dark teal, ideal for subtle backgrounds
   background = "#121212",
-  red_light = "#BD4C4C",
-  red = "#933737",
-  a_0 = "#ffffff",
-  a_1 = "#f5f5f5",
+  g_0 = "#ffffff",
+  g_1 = "#f5f5f5",
   a_2 = "#d5d5d5",
-  a_3 = "#b4b4b4",
-  a_4 = "#a7a7a7",
-  a_5 = "#949494",
-  a_6 = "#737373",
-  a_7 = "#535353",
-  a_8 = "#323232",
-  a_9 = "#212121",
+  g_3 = "#b4b4b4",
+  g_4 = "#a7a7a7",
+  g_5 = "#949494",
+  g_6 = "#737373",
+  g_7 = "#535353",
+  g_8 = "#323232",
+  g_9 = "#212121",
 }
 
 return M.colors
