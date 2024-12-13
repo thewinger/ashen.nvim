@@ -16,19 +16,19 @@ local M = {}
 ---| "blue" # Muted teal, soft and unobtrusive
 ---| "blue_dark" # Dark teal
 ---| "background" # Dark background
----| "g_0" # Greyscale, [0 -> 10] [bright -> dark]
----| "g_1" # Greyscale, [0 -> 10] [bright -> dark]
----| "g_2" # Greyscale, [0 -> 10] [bright -> dark]
----| "g_3" # Greyscale, [0 -> 10] [bright -> dark]
----| "g_4" # Greyscale, [0 -> 10] [bright -> dark]
----| "g_5" # Greyscale, [0 -> 10] [bright -> dark]
----| "g_6" # Greyscale, [0 -> 10] [bright -> dark]
----| "g_7" # Greyscale, [0 -> 10] [bright -> dark]
----| "g_8" # Greyscale, [0 -> 10] [bright -> dark]
----| "g_9" # Greyscale, [0 -> 10] [bright -> dark]
----| "g_10" # Greyscale, [0 -> 10] [bright -> dark]
+---| "g_0"  # Greyscale, g[0 -> 10] [bright -> dark]
+---| "g_1"  # Greyscale, g[0 -> 10] [bright -> dark]
+---| "g_2"  # Greyscale, g[0 -> 10] [bright -> dark]
+---| "g_3"  # Greyscale, g[0 -> 10] [bright -> dark]
+---| "g_4"  # Greyscale, g[0 -> 10] [bright -> dark]
+---| "g_5"  # Greyscale, g[0 -> 10] [bright -> dark]
+---| "g_6"  # Greyscale, g[0 -> 10] [bright -> dark]
+---| "g_7"  # Greyscale, g[0 -> 10] [bright -> dark]
+---| "g_8"  # Greyscale, g[0 -> 10] [bright -> dark]
+---| "g_9"  # Greyscale, g[0 -> 10] [bright -> dark]
+---| "g_10" # Greyscale, g[0 -> 10] [bright -> dark]
 
----@alias HexCode string
+---@alias HexCode string # Hexadecimal color code preceded by a hashtag
 
 ---@class AshenPalette
 ---@field [AshenColor] HexCode
