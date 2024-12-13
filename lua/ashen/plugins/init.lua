@@ -7,9 +7,14 @@ local default_plugins = {
   "telescope",
   "obsidian",
   "minimap",
+  -- "trailblazer",
 }
 
+---@param plugins string[]?
 local function get_plugins(plugins)
+  if not plugins then
+    plugins = default_plugins
+  end
   local out = {}
   for _, plugin in ipairs(plugins) do
     table.insert(out, require("ashen.plugins." .. plugin))
@@ -17,10 +22,17 @@ local function get_plugins(plugins)
   return out
 end
 
-M.setup = function()
-  local plugins = get_plugins(default_plugins)
+---Setup plugin-specific highlight groups on demand.
+---@param plugins string | string[]?
+M.setup = function(plugins)
+  if plugins then
+    if type(plugins) == "string" then
+      plugins = { plugins }
+    end
+  end
+  local plugin_modules = get_plugins(plugins)
   -- local plugins = { require("ashen.plugins." .. "flash") }
-  for _, plugin in ipairs(plugins) do
+  for _, plugin in ipairs(plugin_modules) do
     local function set()
       if plugin.map ~= nil then
         for name, opt in pairs(plugin.map) do
@@ -28,13 +40,13 @@ M.setup = function()
         end
       end
       if plugin.link ~= nil then
-        for name, targ in pairs(plugin.link) do
-          util.link(name, targ)
+        for name, target in pairs(plugin.link) do
+          util.link(name, target)
         end
       end
     end
     if plugin.autocmd ~= nil then
-      vim.api.nvim_create_autocmd({ "FileType" }, {
+      vim.api.nvim_create_autocmd({ plugin.autocmd.event }, {
         callback = set,
         pattern = plugin.autocmd.pattern,
       })

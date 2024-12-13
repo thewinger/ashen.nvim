@@ -3,6 +3,7 @@ local c = require("ashen.colors")
 
 M.autocmd = {
   pattern = "markdown",
+  event = "FileType",
 }
 
 M.link = {
