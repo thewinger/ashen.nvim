@@ -1,8 +1,11 @@
 # Ashen
 
-![](assets/preview.png)
+<!-- ![](assets/preview.png) -->
 
-Ashen is a warm, muted colorscheme that evokes the feeling of embers sizzling out in an old fire pit.
+Ashen is a warm colorscheme that evokes the feeling of embers sizzling out in an old fire pit. It features muted red & orange tones, plenty of grayscale, and hints of teal.
+
+> [!WARNING]
+> This plugin is still in early development: the palette and theming may be subject to change. There is no guarantee any current settings or colours will remain -- if you really miss something that was changed, please open an issue, so I may consider implementing it as an optional setting.
 
 ## Installation
 
