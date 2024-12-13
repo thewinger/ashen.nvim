@@ -38,6 +38,7 @@ local map = {
   Ashen8 = { c.g_8 },
   Ashen9 = { c.g_9 },
   Normal = { c.g_4, c.background },
+  ModeMsg = { c.g_4 },
   CurSearch = { c.g_10, c.orange_glow, { bold = true } },
   IncSearch = { c.g_10, c.g_5, { bold = true } },
   Search = { c.g_10, c.g_5, { bold = true } },
