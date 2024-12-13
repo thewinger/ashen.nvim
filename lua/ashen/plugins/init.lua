@@ -7,6 +7,7 @@ local default_plugins = {
   "telescope",
   "obsidian",
   "minimap",
+  "blink",
   -- "trailblazer",
 }
 
