@@ -6,7 +6,7 @@ M.autocmd = {
   event = "FileType",
 }
 
-M.link = {
+local legacy = {
   ObsidianRefText = "AshenRedLight",
   ObsidianRef = "AshenRedLight",
   ObsidianBullet = "AshenBlue",
@@ -15,5 +15,16 @@ M.link = {
   obsidiantag = "AshenBlue",
   ObsidianTag = "AshenBlue",
   ["@markup.list"] = "AshenBlue",
+}
+
+M.map = {
+  ObsidianRefText = { c.red_kindling },
+  ObsidianRef = { c.red_ember },
+  ObsidianBullet = { c.orange_blaze },
+  ObsidianDone = { c.orange_blaze },
+  ObsidianTodo = { c.orange_glow },
+  obsidiantag = { c.blue },
+  ObsidianTag = { c.blue },
+  ["@markup.list"] = { c.orange_blaze },
 }
 return M

@@ -46,6 +46,7 @@ M.setup = function(plugins)
         end
       end
     end
+
     if plugin.autocmd ~= nil then
       vim.api.nvim_create_autocmd({ plugin.autocmd.event }, {
         callback = set,
