@@ -8,6 +8,7 @@ local default_plugins = {
   "obsidian",
   "minimap",
   "blink",
+  "oil",
   -- "trailblazer",
 }
 
