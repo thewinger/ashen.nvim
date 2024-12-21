@@ -46,6 +46,9 @@ return {
 
 ## Plugins
 
+> [!WARNING]
+> The following plugin list and configuration tips are incomplete! Please check `lua/ashen/pluigns` for a more accurate list of supported plugins. I will endeavour to update this list frequently
+
 Ashen supports the following plugins:
 
 - nvim-cmp
