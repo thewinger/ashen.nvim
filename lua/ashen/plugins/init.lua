@@ -9,6 +9,8 @@ local default_plugins = {
   "minimap",
   "blink",
   "oil",
+  "render-markdown",
+  "mini-icons",
   -- "trailblazer",
 }
 

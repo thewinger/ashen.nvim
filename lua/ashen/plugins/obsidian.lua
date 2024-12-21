@@ -25,6 +25,5 @@ M.map = {
   ObsidianTodo = { c.orange_glow },
   obsidiantag = { c.blue },
   ObsidianTag = { c.blue },
-  ["@markup.list"] = { c.orange_blaze },
 }
 return M
