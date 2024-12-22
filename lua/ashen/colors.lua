@@ -32,7 +32,7 @@ local M = {}
 
 ---@class AshenPalette
 ---@field [AshenColor] HexCode
-M.colors = {
+local colors = {
   red_flame = "#C53030", -- Brightest, most intense red
   red_kindling = "#BD4C4C", -- Light, warm red
   red_glowing = "#C25757", -- Slightly deeper glowing red
@@ -62,6 +62,37 @@ M.colors = {
   g_11 = "#191919",
   g_12 = "#151515",
 }
+
+local standard = {
+  red = "#C53030", -- Brightest, most intense red
+  green = "#2F613F", -- Deep forest green
+  blue = "#3A6E6E", -- Muted teal, soft and unobtrusive
+  yellow = "#F4CA64", -- Bright sunflower yellow
+  orange = "#D87C4A", -- Bright, glowing orange
+  purple = "#7A3D82", -- Rich violet purple
+  pink = "#D1728C", -- Deep rose pink
+  brown = "#853D3D", -- Muted, earthy brick red
+  black = "#121212", -- Deep background black
+  white = "#FFFFFF", -- Pure white
+  gray = "#A7A7A7", -- Neutral mid-gray
+  cyan = "#6E91C4", -- Sky-like cyan
+  magenta = "#C9347C", -- Vibrant fuchsia
+  lime = "#8CD437", -- Bright lime green
+  teal = "#1A3F3F", -- Dark teal
+  navy = "#223A70", -- Deep navy blue
+  maroon = "#7A2E2E", -- Dark, deep ember red
+  olive = "#708238", -- Muted olive green
+  indigo = "#502E5F", -- Deep, muted indigo
+  violet = "#8E5E93", -- Soft mauve violet
+  gold = "#D7A933", -- Rich golden yellow
+  silver = "#D5D5D5", -- Soft, muted silver
+  beige = "#F5F5DC", -- Light, warm beige
+  aqua = "#4AC4C4", -- Bright aqua
+  coral = "#E492B4", -- Soft coral pink
+}
+
+M.colors = vim.tbl_extend("keep", colors, standard)
+
 return M.colors
 
 -- #D87C4A
