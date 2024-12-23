@@ -39,7 +39,7 @@ local map = {
   Ashen9 = { c.g_9 },
   -- Title = { c.red_ember, nil, { bold = true } },
   Title = { c.red_burnt_crimson, nil, { bold = true } },
-  Normal = { c.g_4, c.background },
+  Normal = { c.g_3, c.background },
   ModeMsg = { c.g_4 },
   CurSearch = { c.background, c.orange_glow, { bold = true } },
   IncSearch = { c.background, c.g_5, { bold = true } },
@@ -97,7 +97,7 @@ local map = {
 
   FloatBorder = { c.g_7, nil },
   FloatTitle = { c.g_0, nil },
-  NormalFloat = { c.g_4, nil },
+  NormalFloat = { c.g_3, nil },
   -- TODO: Create noice plugin table instead?
   NoicePopup = { c.g_3, c.g_11 },
 
