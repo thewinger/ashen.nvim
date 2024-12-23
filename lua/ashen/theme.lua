@@ -97,7 +97,9 @@ local map = {
 
   FloatBorder = { c.g_7, nil },
   FloatTitle = { c.g_0, nil },
-  NormalFloat = { c.g_4, c.g_11 },
+  NormalFloat = { c.g_4, nil },
+  -- TODO: Create noice plugin table instead?
+  NoicePopup = { c.g_3, c.g_11 },
 
   ["@character"] = { c.red_glowing, nil },
   ["@character.special"] = { c.red_kindling },
