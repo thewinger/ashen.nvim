@@ -47,16 +47,23 @@ return {
 ## Plugins
 
 > [!WARNING]
-> The following plugin list and configuration tips are incomplete! Please check `lua/ashen/pluigns` for a more accurate list of supported plugins. I will endeavour to update this list frequently
+> The following plugin list and configuration tips are incomplete! Please check `lua/ashen/plugins` for a more accurate list of supported plugins. I will endeavour to update this list frequently.
 
-Ashen supports the following plugins:
+Many plugins are already "supported" because they use standard Neovim highlight groups. However, some plugins require bespoke support. Additionally, some plugins may require extra setup to look good with Ashen. Please see [Configuration](#configuration) for more details.
 
+Ashen explicitly supports the following plugins:
+
+- blink.cmp
 - nvim-cmp
 - flash.nvim
 - lualine
+- mini.icons
+- trailblazer.nvim
 - obsidian.nvim
-- minimap.vim
+- oil.nvim
+- render-markdown.nvim
 - telescope.nvim
+- minimap.vim
 
 ## Configuration
 
@@ -67,13 +74,63 @@ Ashen comes with a preconfigured Lualine theme that includes a word counter for 
 ```lua
 return {
   "nvim-lualine/lualine.nvim",
+  -- ensure Ashen is loaded first
   dependencies = {
     "ficcdaf/ashen.nvim",
   },
-  opts = require("ashen.plugins.lualine").lualine_opts,
+  opts = function()
+    local ashen = require("ashen.plugins.lualine").lualine_opts
+    -- you can set any other options
+    -- expected by lualine, since this
+    -- table will be passed directly to `setup`
+    ashen.extensions = { "lazy", "fzf" }
+    return ashen
+  end,
+}
+```
+
+### Trailblazer.nvim
+
+Trailblazer tends to overwrite the highlight groups set by Ashen. Therefore, you may need to invoke Ashen's Trailblazer setup immediately _after_ loading Trailblazer. Please see the following example:
+
+```lua
+return {
+  "LeonHeidelbach/trailblazer.nvim",
+  event = "UIEnter",
+  -- ensure Ashen is loaded first
+  dependencies = {
+    "ficcdaf/ashen.nvim",
+  },
+  config = function()
+    require("trailblazer").setup({
+      -- your Trailblazer setup here
+    })
+    -- This ensures Ashen's HL groups are set up
+    -- AFTER Trailblazer sets its own.
+    require("ashen.plugins").setup("trailblazer")
+  end,
+}
+```
+
+### Render-markdown.nvim
+
+Ashen will support render-markdown OOTB with no additional configuration. You may optionally consider including the following icons in your setup. Note they may not render properly in all browsers.
+
+```lua
+-- as part of render-markdown.nvim setup
+opts = {
+  bullet = {
+    -- cleaner bullet points
+    icons = { "•", "∙" },
+  },
+  heading = {
+    -- Icons that say H1, H2, etc.
+    icons = { "󰉫 ", "󰉬 ", "󰉭 ", "󰉮 ", "󰉯 ", "󰉰 " },
+  },
+
 }
 ```
 
 ## Acknowledgements
 
-Ashen started out as a (very heavily) customized version of [nvim-noirbuddy](https://github.com/jesseleite/nvim-noirbuddy), so big thanks to jesseleite for the inspiration as well as the lualine configuration.
+Ashen was inspired by [nvim-noirbuddy](https://github.com/jesseleite/nvim-noirbuddy).
