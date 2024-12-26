@@ -172,6 +172,11 @@ local map = {
   DiagnosticSignHint = { c.g_4, nil },
   DiagnosticHint = { c.g_4 },
   DiagnosticInfo = { c.g_2 },
+  DiagnosticUnderlineError = { nil, nil, { sp = c.red_flame } },
+  DiagnosticUnderlineWarn = { nil, nil, { sp = c.orange_golden } },
+  DiagnosticUnderlineOk = { nil, nil, { sp = c.green } },
+  DiagnosticUnderlineInfo = { nil, nil, { sp = c.blue } },
+  DiagnosticUnderlineHint = { nil, nil, { sp = c.g_2 } },
 
   DiagnosticOk = { c.g_2, nil },
   Added = { c.g_4, nil },
