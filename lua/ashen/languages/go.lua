@@ -6,6 +6,7 @@ M.name = "go"
 M.lsp_attach = true
 M.map = {
   ["@lsp.type.type"] = { c.blue },
+  ["@lsp.typemod.variable.readonly.go"] = { c.blue },
 }
 M.link = {
 
