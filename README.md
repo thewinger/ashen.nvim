@@ -1,13 +1,15 @@
 # Ashen
 
-Using Neovim is already hard on the brain, so it should at least be easy on the eyes. Ashen is a warm, muted colorscheme that evokes the feeling of embers sizzling out in an old fire pit. It features red & orange tones, plenty of grayscale, and hints of teal.
+Coding is already hard on the brain, so it should at least be easy on the eyes. Ashen is a warm, muted colorscheme that evokes the feeling of embers sizzling out in an old fire pit. It features red & orange tones, plenty of grayscale, and hints of teal.
 
-![Lua, Python, and Go code in the Ashen theme.](assets/preview.png)
+![Lua, Python, and Go code in the Ashen theme.](assets/preview.png "Lua, Python, and Go code in the Ashen theme.")
 
 > [!WARNING]
 > This theme is still in early development: the palette and theming may be subject to change. Although Ashen is opinionated (by nature of me marking my own "dream theme"), I strive to keep it accessible for everyone.
 
 ## Contents
+
+<!--toc:start-->
 
 - [Features](#features)
 - [Installation](#installation)
@@ -21,7 +23,9 @@ Using Neovim is already hard on the brain, so it should at least be easy on the 
   - [Nvim-colorizer](#nvim-colorizer)
 - [Acknowledgements](#acknowledgements)
 - [Roadmap](#roadmap)
+- [Unlicense](#unlicense)
 - [Contributing](#contributing)
+<!--toc:end-->
 
 ## Features
 
@@ -202,6 +206,10 @@ Ashen was inspired by [nvim-noirbuddy](https://github.com/jesseleite/nvim-noirbu
 - [ ] Compilation and caching of theme to improve startup time (like [kanagawa](https://github.com/rebelot/kanagawa.nvim))
 - [ ] More extras.
 
+## Unlicense
+
+Ashen is relinquished into the public domain. For more information, please see the [unlicense](./LICENSE).
+
 ## Contributing
 
-I welcome contributions. If you want a certain plugin to be supported, please open and issue and I'll get to it as soon as I can. Forks and PRs welcome.
+I welcome contributions. If you want a certain plugin to be supported, please open and issue and I'll get to it as soon as I can. Please note that by contributing _code_ to this repository, you agree to [release it into the public domain.](./LICENSE).
