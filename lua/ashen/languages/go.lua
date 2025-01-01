@@ -3,6 +3,10 @@ local c = require("ashen.colors")
 
 M.dot_link = true
 M.name = "go"
+M.lsp_attach = true
+M.map = {
+  ["@lsp.type.type"] = { c.blue },
+}
 M.link = {
 
   -- ["@lsp.type.class"] = { link = "Structure" },
@@ -21,7 +25,7 @@ M.link = {
   -- ["@lsp.type.typeParameter"] = { link = "TypeDef" },
   ["@lsp.type.variable"] = "@variable", -- Identifier
   ["@lsp.type.comment"] = "@comment", -- Comment
-  ["@lsp.type.type"] = "gotype",
+  -- ["@lsp.type.type"] = "gotype",
 
   ["@lsp.type.selfParameter"] = "@variable.builtin",
   -- ["@lsp.type.builtinConstant"] = { link = "@constant.builtin" },

@@ -16,6 +16,7 @@ M.load = function()
   require("ashen.theme").setup()
   require("ashen.plugins").setup()
   require("ashen.autocmds").setup()
+  require("ashen.languages").setup()
 end
 
 M.setup = function(args)
