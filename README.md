@@ -5,7 +5,7 @@ Coding is already hard on the brain, so it should at least be easy on the eyes. 
 ![Lua, Python, and Go code in the Ashen theme.](assets/preview.png "Lua, Python, and Go code in the Ashen theme.")
 
 > [!WARNING]
-> This theme is still in early development: the palette and theming may be subject to change. Although Ashen is opinionated (by nature of me marking my own "dream theme"), I strive to keep it accessible for everyone.
+> This theme is still in early development: the palette and theming may be subject to change. By nature of this being my "dream theme", Ashen is opinionated, and some stylistic choices and implementations are likely to change at some point. Thank you for your understanding, and you are welcome to open an issue if you want to see something return as an optional feature.
 
 ## Contents
 
@@ -30,7 +30,7 @@ Coding is already hard on the brain, so it should at least be easy on the eyes. 
 ## Features
 
 - Warm, cozy palette that's easy on the eyes.
-- Clear differentiation of errors and warnings despite the red and orange heavy palette.
+- Clear differentiation of errors and warnings.
 - Supports a number of [plugins](#plugins).
 - Fast load time.
 - Actively developed.
@@ -58,7 +58,6 @@ require("ashen").load()
 If you're using [LazyVim](https://www.lazyvim.org/), I recommend the following:
 
 ```lua
--- in lua/plugins/colorscheme.lua
 return {
   { "ficcdaf/ashen.nvim" },
   -- Configure LazyVim to load Ashen
@@ -74,7 +73,7 @@ return {
 ## Plugins
 
 > [!WARNING]
-> The following plugin list and configuration tips may be incomplete! Please check `lua/ashen/plugins` for a more accurate list of supported plugins. I will endeavour to update this list frequently.
+> The following may be incomplete! Please check `lua/ashen/plugins` for an up-to-date list of supported plugins. I will endeavour to update this README frequently.
 
 Many plugins are already "supported" because they use standard Neovim highlight groups. However, some plugins require bespoke support. Additionally, some plugins may require extra setup to look good with Ashen. Please see [Configuration](#configuration) for more details.
 
@@ -128,6 +127,8 @@ return {
   end,
 }
 ```
+
+> I am working on improving the word counter and releasing it as a separate plugin. When that happens, Ashen will be updated to support it out of the box.
 
 ### Trailblazer.nvim
 
@@ -204,7 +205,7 @@ Ashen was inspired by [nvim-noirbuddy](https://github.com/jesseleite/nvim-noirbu
 - [ ] Exclude any supported plugin modules from loading.
 - [ ] Documentation for contributors to add plugin support.
 - [ ] Compilation and caching of theme to improve startup time (like [kanagawa](https://github.com/rebelot/kanagawa.nvim))
-- [ ] More extras.
+- [ ] Kitty, Wezterm, Xresources, Pywal16 extras.
 
 ## Unlicense
 
