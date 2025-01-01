@@ -1,11 +1,35 @@
 # Ashen
 
-<!-- ![](assets/preview.png) -->
+Using Neovim is already hard on the brain, so it should at least be easy on the eyes. Ashen is a warm, muted colorscheme that evokes the feeling of embers sizzling out in an old fire pit. It features red & orange tones, plenty of grayscale, and hints of teal.
 
-Ashen is a warm colorscheme that evokes the feeling of embers sizzling out in an old fire pit. It features muted red & orange tones, plenty of grayscale, and hints of teal.
+![Lua, Python, and Go code in the Ashen theme.](assets/preview.png)
 
 > [!WARNING]
-> This plugin is still in early development: the palette and theming may be subject to change. There is no guarantee any current settings or colours will remain -- if you really miss something that was changed, please open an issue, so I may consider implementing it as an optional setting.
+> This theme is still in early development: the palette and theming may be subject to change. Although Ashen is opinionated (by nature of me marking my own "dream theme"), I strive to keep it accessible for everyone.
+
+## Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Plugins](#plugins)
+- [Extras](#extras)
+  - [Ghostty](#ghostty)
+- [Configuration](#configuration)
+  - [Lualine](#lualine)
+  - [Trailblazer.nvim](#trailblazernvim)
+  - [Render-markdown.nvim](#render-markdownnvim)
+  - [Nvim-colorizer](#nvim-colorizer)
+- [Acknowledgements](#acknowledgements)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+
+## Features
+
+- Warm, cozy palette that's easy on the eyes.
+- Clear differentiation of errors and warnings despite the red and orange heavy palette.
+- Supports a number of [plugins](#plugins).
+- Fast load time.
+- Actively developed.
 
 ## Installation
 
@@ -33,7 +57,6 @@ If you're using [LazyVim](https://www.lazyvim.org/), I recommend the following:
 -- in lua/plugins/colorscheme.lua
 return {
   { "ficcdaf/ashen.nvim" },
-
   -- Configure LazyVim to load Ashen
   {
     "LazyVim/LazyVim",
@@ -47,7 +70,7 @@ return {
 ## Plugins
 
 > [!WARNING]
-> The following plugin list and configuration tips are incomplete! Please check `lua/ashen/plugins` for a more accurate list of supported plugins. I will endeavour to update this list frequently.
+> The following plugin list and configuration tips may be incomplete! Please check `lua/ashen/plugins` for a more accurate list of supported plugins. I will endeavour to update this list frequently.
 
 Many plugins are already "supported" because they use standard Neovim highlight groups. However, some plugins require bespoke support. Additionally, some plugins may require extra setup to look good with Ashen. Please see [Configuration](#configuration) for more details.
 
@@ -65,11 +88,24 @@ Ashen explicitly supports the following plugins:
 - telescope.nvim
 - minimap.vim
 
+## Extras
+
+Extras can be found [here](./extras/).
+
+### Ghostty
+
+To use the Ashen theme in Ghostty, simply clone this repository and include the absolute path to the theme in your Ghostty config. For example:
+
+```Bash
+git clone https://github.com/ficcdaf/ashen.nvim.git $HOME/ashen.nvim
+echo 'theme = "$HOME/ashen.nvim/ghostty/ashen"' >> $HOME/.config/ghostty/config
+```
+
 ## Configuration
 
 ### Lualine
 
-Ashen comes with a preconfigured Lualine theme that includes a word counter for Markdown, Text, and Latex files, as well as optional [noice.nvim](https://github.com/folke/noice.nvim) and [pomo.nvim](https://github.com/epwalsh/pomo.nvim) support (if you have those plugins installed.) The following is an example of how to configure Lualine to use Ashen:
+Ashen comes with a preconfigured Lualine theme that includes a word counter for Markdown, Text, and Latex files. Optionally, [noice.nvim](https://github.com/folke/noice.nvim) is used to indicate Macro recording status, and [pomo.nvim](https://github.com/epwalsh/pomo.nvim) is supported. The following is an example of how to configure Lualine to use Ashen:
 
 ```lua
 return {
@@ -114,7 +150,7 @@ return {
 
 ### Render-markdown.nvim
 
-Ashen will support render-markdown OOTB with no additional configuration. You may optionally consider including the following icons in your setup. Note they may not render properly in all browsers.
+Ashen will support `render-markdown` OOTB with no additional configuration. You may optionally consider including the following icons in your setup. Note they may not render properly in all browsers.
 
 ```lua
 -- as part of render-markdown.nvim setup
@@ -131,6 +167,41 @@ opts = {
 }
 ```
 
+### Nvim-colorizer
+
+The following code snippet configures `nvim-colorizer` to use Ashen's palette when previewing certain named colors:
+
+```Lua
+return {
+  "catgoose/nvim-colorizer.lua",
+  event = "BufReadPre",
+  dependencies = {
+    "ficcdaf/ashen.nvim",
+  },
+  opts = {
+    user_default_options = {
+      names = true,
+      names_custom = function()
+        return require("ashen.colors")
+      end,
+    },
+  },
+}
+```
+
 ## Acknowledgements
 
 Ashen was inspired by [nvim-noirbuddy](https://github.com/jesseleite/nvim-noirbuddy).
+
+## Roadmap
+
+- [ ] Override palette and arbitrary highlight groups.
+- [ ] Specify any highlights to disable.
+- [ ] Exclude any supported plugin modules from loading.
+- [ ] Documentation for contributors to add plugin support.
+- [ ] Compilation and caching of theme to improve startup time (like [kanagawa](https://github.com/rebelot/kanagawa.nvim))
+- [ ] More extras.
+
+## Contributing
+
+I welcome contributions. If you want a certain plugin to be supported, please open and issue and I'll get to it as soon as I can. Forks and PRs welcome.
