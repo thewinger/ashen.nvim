@@ -14,12 +14,8 @@ Coding is already hard on the brain, so it should at least be easy on the eyes. 
 - [Features](#features)
 - [Installation](#installation)
 - [Plugins](#plugins)
-- [Extras](#extras)
 - [Configuration](#configuration)
-  - [Lualine](#lualine)
-  - [Trailblazer.nvim](#trailblazernvim)
-  - [Render-markdown.nvim](#render-markdownnvim)
-  - [Nvim-colorizer](#nvim-colorizer)
+- [Extras](#extras)
 - [Acknowledgements](#acknowledgements)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
@@ -88,30 +84,6 @@ Ashen explicitly supports the following plugins:
 - render-markdown.nvim
 - telescope.nvim
 - minimap.vim
-
-## Extras
-
-Extras can be found [here](./extras/).
-
-### Ghostty
-
-To use the Ashen theme in Ghostty, simply clone this repository and include the absolute path to the theme in your Ghostty config. For example:
-
-```Bash
-git clone https://github.com/ficcdaf/ashen.nvim.git $HOME/ashen.nvim
-echo 'theme = "$HOME/ashen.nvim/ghostty/ashen"' >> $HOME/.config/ghostty/config
-```
-
-### Kitty
-
-To use the Ashen theme in Kitty, clone the repository, copy the theme into ~/.config/kitty/themes, then select the theme using the theme kitten. For example:
-
-```Bash
-git clone https://github.com/ficcdaf/ashen.nvim.git $HOME/ashen.nvim
-mkdir -p ~/.config/kitty/themes
-cp $HOME/ashen.nvim/extras/kitty/Ashen.conf ~/.config/extras/kitty/themes
-kitten theme Ashen
-```
 
 ## Configuration
 
@@ -203,19 +175,38 @@ return {
 }
 ```
 
+## Extras
+
+Extras can be found [here](./extras/).
+
+### Ghostty
+
+To use the Ashen theme in Ghostty, simply clone this repository and include the absolute path to the theme in your Ghostty config. For example:
+
+```Bash
+git clone https://github.com/ficcdaf/ashen.nvim.git $HOME/ashen.nvim
+echo 'theme = "$HOME/ashen.nvim/ghostty/ashen"' >> $HOME/.config/ghostty/config
+```
+
+### Kitty
+
+To use the Ashen theme in Kitty, clone the repository, copy the theme into ~/.config/kitty/themes, then select the theme using the theme kitten. For example:
+
+```Bash
+git clone https://github.com/ficcdaf/ashen.nvim.git $HOME/ashen.nvim
+mkdir -p ~/.config/kitty/themes
+cp $HOME/ashen.nvim/extras/kitty/Ashen.conf ~/.config/extras/kitty/themes
+kitten theme Ashen
+```
+
 ## Acknowledgements
 
 Ashen was inspired by [nvim-noirbuddy](https://github.com/jesseleite/nvim-noirbuddy).
 
 ## Roadmap
 
-- [ ] Override palette and arbitrary highlight groups.
-- [ ] Specify any highlights to disable.
-- [ ] Exclude any supported plugin modules from loading.
-- [ ] Documentation for contributors to add plugin support.
-- [ ] Compilation and caching of theme to improve startup time (like [kanagawa](https://github.com/rebelot/kanagawa.nvim))
-- [ ] Kitty, Wezterm, Xresources, Pywal16 extras.
+Please refer to the [issues](https://github.com/ficcdaf/ashen.nvim/issues) page for an up-to-date roadmap.
 
 ## Contributing
 
-I welcome contributions. If you want a certain plugin to be supported, please open and issue and I'll get to it as soon as I can.
+I welcome contributions. If you want a certain plugin to be supported, please open and issue and I'll get to it as soon as I can. If you're interested in contributing, you're welcome to take a stab at any of the [issues](https://github.com/ficcdaf/ashen.nvim/issues).
