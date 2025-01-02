@@ -2,7 +2,7 @@
 name: Documentation
 about: Suggest changes to Ashen's documentation
 title: "[DOC] "
-labels: ''
+labels: documentation
 assignees: ficcdaf
 
 ---
