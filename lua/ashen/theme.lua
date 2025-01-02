@@ -3,7 +3,7 @@ local M = {}
 local util = require("ashen.util")
 local c = require("ashen.colors")
 
----@alias AshenHighlight [AshenColor?, AshenColor?, AshenTextStyle?] # Defines a highlight group.
+---@alias AshenHighlight [ColorName?, ColorName?, AshenTextStyle?] # Defines a highlight group.
 
 ---@alias TextStyle string
 ---| 'bold'

@@ -1,12 +1,10 @@
-local M = {}
-
----@alias AshenColor string
+---@alias ColorName string
 
 ---@alias HexCode string # Hexadecimal color code preceded by a hashtag
 
----@class AshenPalette
----@field [AshenColor] HexCode
-local colors = {
+---@class Palette
+---@field [ColorName] HexCode
+local M = {
   red_flame = "#C53030", -- Brightest, most intense red
   red_glowing = "#DF6464", -- Slightly deeper glowing red
   red_ember = "#B14242", -- Deep, smoldering ember red
@@ -40,11 +38,8 @@ local colors = {
   g_10 = "#1d1d1d",
   g_11 = "#191919",
   g_12 = "#151515",
-}
 
-local standard = {
   red = "#C53030", -- Brightest, most intense red
-  blue = "#3A6E6E", -- Muted teal, soft and unobtrusive
   yellow = "#F4CA64", -- Bright sunflower yellow
   orange = "#D87C4A", -- Bright, glowing orange
   purple = "#7A3D82", -- Rich violet purple
@@ -69,6 +64,13 @@ local standard = {
   coral = "#E492B4", -- Soft coral pink
 }
 
-M.colors = vim.tbl_extend("keep", colors, standard)
+-- This can add new colors to the palette
+-- or override existing ones
+M.setup = function(opts)
+  local new = opts.colors or {}
+  for k, v in pairs(new) do
+    M[k] = v
+  end
+end
 
-return M.colors
+return M
