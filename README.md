@@ -22,7 +22,6 @@ Coding is already hard on the brain, so it should at least be easy on the eyes. 
   - [Nvim-colorizer](#nvim-colorizer)
 - [Acknowledgements](#acknowledgements)
 - [Roadmap](#roadmap)
-- [Unlicense](#unlicense)
 - [Contributing](#contributing)
 <!--toc:end-->
 
@@ -217,10 +216,6 @@ Ashen was inspired by [nvim-noirbuddy](https://github.com/jesseleite/nvim-noirbu
 - [ ] Compilation and caching of theme to improve startup time (like [kanagawa](https://github.com/rebelot/kanagawa.nvim))
 - [ ] Kitty, Wezterm, Xresources, Pywal16 extras.
 
-## Unlicense
-
-Ashen is relinquished into the public domain. For more information, please see the [unlicense](./LICENSE).
-
 ## Contributing
 
-I welcome contributions. If you want a certain plugin to be supported, please open and issue and I'll get to it as soon as I can. Please note that by contributing _code_ to this repository, you agree to [release it into the public domain.](./LICENSE).
+I welcome contributions. If you want a certain plugin to be supported, please open and issue and I'll get to it as soon as I can.
