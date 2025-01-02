@@ -5,7 +5,7 @@ Coding is already hard on the brain, so it should at least be easy on the eyes. 
 ![Lua, Python, and Go code in the Ashen theme.](assets/preview.png "Lua, Python, and Go code in the Ashen theme.")
 
 > [!WARNING]
-> This theme is still in early development: the palette and theming may be subject to change. By nature of this being my "dream theme", Ashen is opinionated, and some stylistic choices and implementations are likely to change at some point. Thank you for your understanding, and you are welcome to open an issue if you want to see something return as an optional feature.
+> This theme is still in early development: the palette and theming may be subject to change. An experimental, slightly brighter version of the palette is available in the `palette-rework` branch.
 
 ## Contents
 
