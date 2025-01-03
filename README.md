@@ -214,28 +214,6 @@ opts = {
 }
 ```
 
-### Nvim-colorizer
-
-The following code snippet configures `nvim-colorizer` to use Ashen's palette when previewing certain named colors:
-
-```Lua
-return {
-  "catgoose/nvim-colorizer.lua",
-  event = "BufReadPre",
-  dependencies = {
-    "ficcdaf/ashen.nvim",
-  },
-  opts = {
-    user_default_options = {
-      names = true,
-      names_custom = function()
-        return require("ashen.colors")
-      end,
-    },
-  },
-}
-```
-
 ## Extras
 
 Extras can be found [here](./extras/). You can install them like you would any other theme in the respective application.
