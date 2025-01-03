@@ -15,6 +15,7 @@ Coding is already hard on the brain, so it should at least be easy on the eyes. 
 - [Installation](#installation)
 - [Plugins](#plugins)
 - [Configuration](#configuration)
+- [Plugin Configuration](#plugin-configuration)
 - [Extras](#extras)
 - [Acknowledgements](#acknowledgements)
 - [Roadmap](#roadmap)
@@ -35,9 +36,13 @@ Using [lazy.nvim](https://lazy.folke.io/):
 
 ```lua
 {
- "ficcdaf/ashen.nvim",
- lazy = false,
- priority = 1000,
+  "ficcdaf/ashen.nvim",
+  lazy = false,
+  priority = 1000,
+  -- configuration is optional!
+  opts = {
+    -- your settings here
+  },
 }
 ```
 
@@ -86,6 +91,60 @@ Ashen explicitly supports the following plugins:
 - minimap.vim
 
 ## Configuration
+
+> [!WARNING] If you choose to set any options, please not that `setup` _only_ sets up
+> the configuration and does **not** load the theme! You must call `colorscheme ashen`
+> or `require("ashen").load()` _after_ `setup`!
+
+You can pass an options table to the `setup` function to configure Ashen, the same you would any other plugin. If you use `lazy.nvim`, you can set options as shown in [installation](#installation)!
+
+```Lua
+require("ashen").setup({
+  -- your settings here
+})
+-- theme must be loaded *after* setup!
+vim.cmd("colorscheme ashen")
+```
+
+The following default settings are provided. Any settings not self-explanatory will be expanded on below. Any provided settings will be merged with the defaults.
+
+```Lua
+{
+  -- override palette, see below
+  ---@type Palette
+  ---@field [ColorName] HexCode
+  colors = {},
+  -- force clear other highlights
+  -- even if no other theme is set
+  -- (useful for debugging)
+  force_hi_clear = false,
+  -- enable termguicolors on load (recommended)
+  termguicolors = true,
+}
+```
+
+### Palette Override
+
+You can override any color in Ashen's palette, or set new colors entirely. The `colors` setting accepts a table of `ColorName = HexCode` pairs, where they are both strings, with `ColorName` corresponding to an Ashen color, and `HexCode` being a `#` prefixed hexadecimal color code. For an list of available color names, please see [colors.lua](./lua/ashen/colors.lua).
+
+Please see the following example:
+
+```Lua
+{
+  colors = {
+    background = "#000000",
+    red_ember = "##933737"
+  },
+}
+```
+
+> [!TIP] Made a palette you're proud of? It could become Ashen's next "theme variant" -- don't be afraid to open a feature request for it!
+
+### Highlight Override
+
+_Not yet implemented, but coming soon to an Ashen installation near you!_
+
+## Plugin Configuration
 
 ### Lualine
 
@@ -195,4 +254,4 @@ Please refer to the [issues](https://github.com/ficcdaf/ashen.nvim/issues) page 
 
 ## Contributing
 
-I welcome contributions. If you want a certain plugin to be supported, please open and issue and I'll get to it as soon as I can. If you're interested in contributing, you're welcome to take a stab at any of the [issues](https://github.com/ficcdaf/ashen.nvim/issues).
+I welcome contributions. If you want a certain plugin or extra to be added, please open an issue and I'll get to it as soon as I can. If you're interested in contributing, you're welcome to take a stab at any of the [issues](https://github.com/ficcdaf/ashen.nvim/issues).
