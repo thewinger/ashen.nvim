@@ -42,6 +42,13 @@ local colors = {
   g_12 = "#151515",
 }
 
+-- WARNING: These colors are not part of the Ashen palette!
+-- Rather, they're here as reference, to have a list of "standard"
+-- colors that still fit nicely with the theme -- for example, in case
+-- you *really* need something to be, say, purple, and want it to
+-- look decent with the rest of the theme. Please don't use them
+-- if you're porting Ashen to another program -- I can't guarantee
+-- that it'll look good! --ficcdaf
 local standard = {
   red = "#C53030", -- Brightest, most intense red
   blue = "#3A6E6E", -- Muted teal, soft and unobtrusive
