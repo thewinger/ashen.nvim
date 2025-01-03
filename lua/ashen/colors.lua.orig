@@ -38,8 +38,9 @@ local M = {
   g_10 = "#1d1d1d",
   g_11 = "#191919",
   g_12 = "#151515",
-}
 
+<<<<<<< HEAD
+=======
 -- WARNING: These colors are not part of the Ashen palette!
 -- Rather, they're here as reference, to have a list of "standard"
 -- colors that still fit nicely with the theme -- for example, in case
@@ -47,8 +48,9 @@ local M = {
 -- look decent with the rest of the theme. Please don't use them
 -- if you're porting Ashen to another program -- I can't guarantee
 -- that it'll look good! --ficcdaf
+local standard = {
+>>>>>>> main
   red = "#C53030", -- Brightest, most intense red
-  blue = "#3A6E6E", -- Muted teal, soft and unobtrusive
   yellow = "#F4CA64", -- Bright sunflower yellow
   orange = "#D87C4A", -- Bright, glowing orange
   purple = "#7A3D82", -- Rich violet purple
