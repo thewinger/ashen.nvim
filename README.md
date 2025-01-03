@@ -177,27 +177,13 @@ return {
 
 ## Extras
 
-Extras can be found [here](./extras/).
+Extras can be found [here](./extras/). You can install them like you would any other theme in the respective application.
 
-### Ghostty
+The following extras are available:
 
-To use the Ashen theme in Ghostty, simply clone this repository and include the absolute path to the theme in your Ghostty config. For example:
-
-```Bash
-git clone https://github.com/ficcdaf/ashen.nvim.git $HOME/ashen.nvim
-echo 'theme = "$HOME/ashen.nvim/ghostty/ashen"' >> $HOME/.config/ghostty/config
-```
-
-### Kitty
-
-To use the Ashen theme in Kitty, clone the repository, copy the theme into ~/.config/kitty/themes, then select the theme using the theme kitten. For example:
-
-```Bash
-git clone https://github.com/ficcdaf/ashen.nvim.git $HOME/ashen.nvim
-mkdir -p ~/.config/kitty/themes
-cp $HOME/ashen.nvim/extras/kitty/Ashen.conf ~/.config/extras/kitty/themes
-kitten theme Ashen
-```
+- Ghostty
+- Kitty
+- Alacritty
 
 ## Acknowledgements
 
