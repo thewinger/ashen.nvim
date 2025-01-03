@@ -5,26 +5,34 @@
 ---@class Palette
 ---@field [ColorName] HexCode
 local M = {
+  -- used for errors
   red_flame = "#C53030", -- Brightest, most intense red
+  -- standard red colors
   red_glowing = "#DF6464", -- Slightly deeper glowing red
   red_ember = "#B14242", -- Deep, smoldering ember red
 
+  -- standard orange colors
   orange_glow = "#D87C4A", -- Bright, glowing orange
   orange_blaze = "#C4693D", -- Vibrant blaze orange
+  orange_smolder = "#E49A44",
 
-  -- change smolder to another orange
-  orange_smolder = "#E49A44", -- Dark, smoldering orange
+  -- used for warnings
   orange_golden = "#E5A72A",
 
+  -- NOTE: These reds are not widely used and will likely be fazed out in a future update.
   red_kindling = "#BD4C4C", -- Light, warm red
   red_burnt_crimson = "#A84848", -- Muted crimson red
   red_brick = "#853D3D", -- Muted, earthy brick red
   red_deep_ember = "#7A2E2E", -- Dark, deep ember red
   red_ashen = "#6F2929", -- Cool, ashen red
+
+  -- standard misc colors
   blue = "#4A8B8B", -- Muted teal, soft and unobtrusive
   blue_dark = "#3A6E6E", -- Dark teal, ideal for subtle backgrounds
-  background = "#121212",
   green = "#1E6F54",
+
+  -- standard grayscale palette
+  background = "#121212",
   g_0 = "#fcfcfc",
   g_1 = "#f5f5f5",
   g_2 = "#d5d5d5",
@@ -38,17 +46,17 @@ local M = {
   g_10 = "#1d1d1d",
   g_11 = "#191919",
   g_12 = "#151515",
-}
 
--- WARNING: These colors are not part of the Ashen palette!
--- Rather, they're here as reference, to have a list of "standard"
--- colors that still fit nicely with the theme -- for example, in case
--- you *really* need something to be, say, purple, and want it to
--- look decent with the rest of the theme. Please don't use them
--- if you're porting Ashen to another program -- I can't guarantee
--- that it'll look good! --ficcdaf
+  -- WARNING: These colors are not part of the Ashen palette!
+  -- Rather, they're here as reference, to have a list of "normal"
+  -- colors that still fit nicely with the theme -- for example, in case
+  -- you *really* need something to be, say, purple, and want it to
+  -- look decent with the rest of the theme. Currently, the only place
+  -- these are used is in the mini.icons integration!
+  -- Please don't use them
+  -- if you're porting Ashen to another program -- I can't guarantee
+  -- that it'll look good! --ficcdaf
   red = "#C53030", -- Brightest, most intense red
-  blue = "#3A6E6E", -- Muted teal, soft and unobtrusive
   yellow = "#F4CA64", -- Bright sunflower yellow
   orange = "#D87C4A", -- Bright, glowing orange
   purple = "#7A3D82", -- Rich violet purple

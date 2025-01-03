@@ -4,13 +4,13 @@ M.lazyvim = false
 
 -- default settings
 M.opts = {
+  -- override palette
+  ---@type Palette
+  colors = {},
   -- force clear other highlights
   force_hi_clear = false,
   -- enable termguicolors on load
   termguicolors = true,
-  -- override palette
-  ---@type Palette
-  colors = {},
 }
 
 -- Merge user options with defaults
