@@ -223,6 +223,7 @@ The following extras are available:
 - Ghostty
 - Kitty
 - Alacritty
+- Windows Terminal
 
 ## Acknowledgements
 
