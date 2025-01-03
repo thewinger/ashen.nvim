@@ -134,7 +134,7 @@ Please see the following example:
 {
   colors = {
     background = "#000000",
-    red_ember = "##933737"
+    red_ember = "#933737"
   },
 }
 ```
