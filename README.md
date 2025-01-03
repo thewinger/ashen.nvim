@@ -74,7 +74,7 @@ return {
 > [!WARNING]
 > The following may be incomplete! Please check `lua/ashen/plugins` for an up-to-date list of supported plugins. I will endeavour to update this README frequently.
 
-Many plugins are already "supported" because they use standard Neovim highlight groups. However, some plugins require bespoke support. Additionally, some plugins may require extra setup to look good with Ashen. Please see [Configuration](#configuration) for more details.
+Many plugins are already "supported" because they use standard Neovim highlight groups. However, some plugins require bespoke support. Additionally, some plugins may require extra setup to look good with Ashen. Please see [Plugin Configuration](#plugin-configuration) for more details.
 
 Ashen explicitly supports the following plugins:
 
@@ -92,7 +92,8 @@ Ashen explicitly supports the following plugins:
 
 ## Configuration
 
-> [!WARNING] If you choose to set any options, please not that `setup` _only_ sets up
+> [!WARNING]
+> If you choose to set any options, please not that `setup` _only_ sets up
 > the configuration and does **not** load the theme! You must call `colorscheme ashen`
 > or `require("ashen").load()` _after_ `setup`!
 
@@ -138,7 +139,8 @@ Please see the following example:
 }
 ```
 
-> [!TIP] Made a palette you're proud of? It could become Ashen's next "theme variant" -- don't be afraid to open a feature request for it!
+> [!TIP]
+> Made a palette you're proud of? It could become Ashen's next "theme variant" -- don't be afraid to open a feature request for it!
 
 ### Highlight Override
 
