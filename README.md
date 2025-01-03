@@ -93,7 +93,7 @@ Ashen explicitly supports the following plugins:
 ## Configuration
 
 > [!WARNING]
-> If you choose to set any options, please not that `setup` _only_ sets up
+> If you choose to set any options, please note that `setup` _only_ sets up
 > the configuration and does **not** load the theme! You must call `colorscheme ashen`
 > or `require("ashen").load()` _after_ `setup`!
 
