@@ -57,7 +57,7 @@ M.map = {
 
   ColorColumn = { nil, c.g_8 },
   Conceal = { c.g_7, nil },
-  Cursor = { nil, nil },
+  Cursor = { c.g_12, c.g_3 },
   CursorColumn = { nil, c.g_9 },
   CursorLine = { nil, c.g_9 },
   CursorLineNr = { c.g_6, c.g_9 },
