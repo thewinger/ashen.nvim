@@ -107,7 +107,7 @@ require("ashen").setup({
 vim.cmd("colorscheme ashen")
 ```
 
-The following default settings are provided. Any settings not self-explanatory will be expanded on below. Any provided settings will be merged with the defaults.
+The following default settings are provided. User provided settings will be merged with the defaults. For settings that are not self-explanatory, please see below.
 
 ```Lua
 {
@@ -124,6 +124,8 @@ The following default settings are provided. Any settings not self-explanatory w
     ---@type HighlightMap
     merge_override = {},
   },
+  -- use transparent background
+  transparent = false,
   -- force clear other highlights
   -- even if no other theme is set
   -- (useful for debugging)

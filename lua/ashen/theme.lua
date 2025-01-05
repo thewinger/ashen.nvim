@@ -217,11 +217,23 @@ M.map = {
   String = { c.red_glowing, nil },
 }
 
+---@type string[]
+M.transparent_bg = {
+  "Normal",
+  "SignColumn",
+  "LineNr",
+}
+
 ---override HL groups
 ---@param opts Options
 M.setup = function(opts)
   -- TODO: Let users provide palette color names instead of Hex codes
   -- and check for it automatically
+  if opts.transparent then
+    for _, name in ipairs(M.transparent_bg) do
+      M.map[name] = util.remove_bg(M.map[name])
+    end
+  end
   for k, v in pairs(opts.hl.merge_override or {}) do
     M.map[k] = vim.tbl_deep_extend("force", M.map[k], v)
   end

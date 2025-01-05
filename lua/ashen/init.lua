@@ -1,5 +1,8 @@
 local M = {}
 
+-- highlight on yank needs to be set
+-- differently using lazyvim so we
+-- have to track whether the user is running it
 M.lazyvim = false
 
 -- default settings
@@ -17,6 +20,8 @@ M.opts = {
     ---@type HighlightMap
     merge_override = {},
   },
+  -- use transparent background
+  transparent = false,
   -- force clear other highlights
   force_hi_clear = false,
   -- enable termguicolors on load

@@ -45,6 +45,11 @@ M.hl = function(name, spec)
   if not M.is_norm(spec) then
     spec = M.normalize_hl(spec)
   end
+  -- check if transparency is enabled
+  -- this is too costly to do on each hl, though
+  if require("ashen.theme").transparent_bg[name] then
+    spec.bg = nil
+  end
   -- -- Debugging output to verify the structure
   -- for k, v in pairs(spec) do
   --   if type(k) ~= "string" then
@@ -53,6 +58,28 @@ M.hl = function(name, spec)
   -- end
   vim.api.nvim_set_hl(0, name, spec)
   return true
+end
+
+---@param spec HighlightNormalized
+---@return HighlightSpec
+local function denormalize(spec)
+  local fg = spec.fg
+  spec.fg = nil
+  local bg = spec.bg
+  spec.bg = nil
+  return { fg, bg, spec }
+end
+
+---@param spec HighlightSpec|HighlightNormalized
+M.remove_bg = function(spec)
+  if not M.is_norm(spec) then
+    local norm = M.normalize_hl(spec)
+    norm.bg = nil
+    return denormalize(norm)
+  else
+    spec.bg = nil
+    return spec
+  end
 end
 
 function M.link_lang(table, lang)
