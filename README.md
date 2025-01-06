@@ -286,6 +286,7 @@ The following extras are available:
 - Kitty
 - Alacritty
 - Windows Terminal
+- bat
 
 ## Acknowledgements
 
