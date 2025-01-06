@@ -287,6 +287,7 @@ The following extras are available:
 - Alacritty
 - Windows Terminal
 - bat
+- eza
 
 ## Acknowledgements
 
