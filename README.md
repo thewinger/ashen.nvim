@@ -9,7 +9,8 @@ hints of teal.
 
 ![Lua, Python, and Go code in the Ashen theme.](assets/preview.png "Lua, Python, and Go code in the Ashen theme.")
 
-> [!WARNING] This theme is still in early development: the palette and theming
+> [!WARNING]
+> This theme is still in early development: the palette and theming
 > may be subject to change.
 
 ## Contents
@@ -98,7 +99,8 @@ see [Plugin Configuration](#plugin-configuration) for more details.
 
 ## Configuration
 
-> [!WARNING] If you choose to set any options, please note that `setup` _only_
+> [!WARNING]
+> If you choose to set any options, please note that `setup` _only_
 > sets up the configuration and does **not** load the theme! You must call
 > `colorscheme ashen` or `require("ashen").load()` _after_ `setup`!
 
@@ -117,7 +119,8 @@ vim.cmd("colorscheme ashen")
 The default settings will work for most people. However, extensive configuration
 options are provided.
 
-> [!TIP] If you are not changing any of the defaults, avoid calling `setup` or
+> [!TIP]
+> If you are not changing any of the defaults, avoid calling `setup` or
 > settings any `opts` -- your startup time will be faster!
 
 <details>
@@ -181,7 +184,8 @@ Please see the following example:
 }
 ```
 
-> [!TIP] Made a palette you're proud of? It could become Ashen's next "theme
+> [!TIP]
+> Made a palette you're proud of? It could become Ashen's next "theme
 > variant" -- don't be afraid to open a feature request for it!
 
 ### Highlight Override
