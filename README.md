@@ -121,7 +121,7 @@ options are provided.
 
 > [!TIP]
 > If you are not changing any of the defaults, avoid calling `setup` or
-> settings any `opts` -- your startup time will be faster!
+> setting any `opts` -- your startup time will be faster!
 
 <details>
   <summary>Available Settings</summary>
@@ -319,7 +319,7 @@ terminal = {
     -- override black
     [0] = "#000000",
     -- override bright green
-    [11] = "##AADB1E",
+    [11] = "#AADB1E",
   },
 }
 ```
