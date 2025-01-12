@@ -155,6 +155,7 @@ end
 ---Utility function merges any number of lists
 ---skipping duplicate values.
 ---@param ... any[]
+---@return any[]
 M.list_merge = function(...)
   local seen = {}
   local merged = {}
