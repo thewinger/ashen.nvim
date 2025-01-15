@@ -482,7 +482,7 @@ return {
     })
     -- This ensures Ashen's HL groups are set up
     -- AFTER Trailblazer sets its own.
-    require("ashen.plugins").load_plugin("flash")
+    require("ashen.plugins").load_plugin("trailblazer")
   end,
 }
 ```
