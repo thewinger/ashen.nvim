@@ -584,12 +584,13 @@ Ashen was inspired by
 
 ## Roadmap
 
+Theme variants and massive performance overhauls are in the works.
+
 Please refer to the [issues](https://github.com/ficcdaf/ashen.nvim/issues) page
-for an up-to-date roadmap.
+for a detailed roadmap.
 
 ## Contributing
 
-I welcome contributions. If you want a certain plugin or extra to be added,
-please open an issue and I'll get to it as soon as I can. If you're interested
-in contributing, you're welcome to take a stab at any of the
-[issues](https://github.com/ficcdaf/ashen.nvim/issues).
+If you want a certain plugin or extra to be added, please open an issue and I'll
+get to it as soon as I can. If you want to contribute, please read the
+[contribution guidelines](/CONTRIBUTING.md).
