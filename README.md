@@ -99,6 +99,8 @@ see [Plugin Configuration](#plugin-configuration) for more details.
 | telescope.nvim       |                        |
 | minimap.vim          |                        |
 | neogit               |                        |
+| FzfLua               | X                      |
+| fzf.vim              |                        |
 
 ## Configuration
 
@@ -437,6 +439,27 @@ loaded automatically.
 </details>
 
 ## Plugin Configuration
+
+### FzfLua
+
+<details>
+<summary>Click to expand</summary>
+
+If FzfLua's colors aren't looking quite right, please make sure that you have
+disabled `fzf_colors` in the settings:
+
+```Lua
+{
+  "ibhagwan/fzf-lua",
+  opts = {
+    -- must be false for the Ashen
+    -- integration to work properly!
+    fzf_colors = false,
+  },
+}
+```
+
+</details>
 
 ### Lualine
 
