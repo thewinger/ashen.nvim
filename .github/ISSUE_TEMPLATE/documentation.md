@@ -1,10 +1,8 @@
 ---
 name: Documentation
 about: Suggest changes to Ashen's documentation
-title: "[DOC] "
 labels: documentation
 assignees: ficcdaf
-
 ---
 
 Describe the problem this change would solve:
