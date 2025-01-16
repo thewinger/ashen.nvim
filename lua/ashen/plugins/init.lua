@@ -70,7 +70,7 @@ local function get_autoload_plugins()
   return plugins
 end
 
-local function set_highlights(plugin)
+local function execute(plugin)
   if plugin.map ~= nil then
     for name, spec in pairs(plugin.map) do
       util.hl(name, spec)
@@ -80,6 +80,9 @@ local function set_highlights(plugin)
     for name, target in pairs(plugin.link) do
       util.link(name, target)
     end
+  end
+  if plugin.exec ~= nil and type(plugin.exec) == "function" then
+    plugin.exec()
   end
 end
 
@@ -104,12 +107,12 @@ M.load_plugin = function(plugin)
   if module.autocmd ~= nil then
     vim.api.nvim_create_autocmd({ module.autocmd.event }, {
       callback = function()
-        set_highlights(module)
+        execute(module)
       end,
       pattern = module.autocmd.pattern,
     })
-  elseif module.map or module.link then
-    set_highlights(module)
+  elseif module.map or module.link or module.exec then
+    execute(module)
   end
 end
 
