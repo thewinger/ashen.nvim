@@ -248,6 +248,8 @@ You can find a detailed explanation of the HighlightMap type below.
 { "#FFFFFF", "#000000", { bold = true, underline = true } }
 -- The style table can be the only element, too.
 { { bold = true, underline = true } }
+-- Or you may pass a "normalized" table as well:
+{ fg = "#FFFFFF", bold = true }
 
 
 ---@alias HighlightMap table<HighlightName, HighlightSpec>
@@ -275,13 +277,16 @@ You can also _link_ arbitrary highlight groups. Links defined in `hl.link` take
 priority over all other links set by Ashen. `hl.link` must be a key-value table
 in which the key is the link's _origin_ and the value is its _target_.
 
+Note that both **hexadecimal color codes** and **Ashen color names** are valid
+inputs for color parameters.
+
 ```Lua
 -- full example
 hl = {
   -- overwrite every field
   ---@type HighlightMap
   force_override = {
-    Normal = { "#FFFFFF", "#000000", { bold = true, underline = true } },
+    Normal = { "red_ember", "#000000", { bold = true, underline = true } },
   },
   -- keep untouched fields
   ---@type HighlightMap
