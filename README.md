@@ -580,6 +580,7 @@ their respective folders.
 ### Environment
 
 - waybar
+- sway
 
 ## Acknowledgements
 
