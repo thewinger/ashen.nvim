@@ -60,6 +60,13 @@ M.is_hex = function(str)
   end
 end
 
+-- TODO: Add function that applies `opts.groups`
+-- overrides to the groups directly in the mapping
+-- (not per `util.hl` call)
+
+-- TODO: refactor into general purpose override
+-- to enforce `opts.style`
+
 ---Function traverses highlight specs and converts
 ---color names into hex codes.
 ---@param spec HighlightSpec|HighlightNormalized
@@ -78,6 +85,8 @@ end
 
 -- This function sets the highlight groups
 -- via Neovim's API. Return value indicates success.
+-- It normalizes the specs and converts colors names to
+-- hexadecimal values.
 ---@param name string
 ---@param spec HighlightSpec|HighlightNormalized?
 ---@return boolean
