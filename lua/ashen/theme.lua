@@ -172,9 +172,6 @@ M.map = {
   ["@lsp.type.function"] = { c.g_1, nil },
   ["@lsp.type.macro"] = { c.red_ember, nil },
   ["@lsp.type.method"] = { c.g_1, nil },
-  -- ["@lsp.type.variable"] = { c.a_2, nil },
-
-  -- Semantic Highlighting
   DiagnosticSignError = { c.red_flame, nil },
   DiagnosticError = { c.red_flame, nil },
   DiagnosticSignWarn = { c.orange_golden, nil },
@@ -191,8 +188,8 @@ M.map = {
 
   DiagnosticOk = { c.g_2, nil },
   Added = { c.g_4, nil },
-  Removed = { c.red_ashen, nil },
-  Changed = { c.blue, nil },
+  Removed = { c.red_ember, nil },
+  Changed = { c.orange_smolder, nil },
   ["@markup.link"] = { c.red_glowing, nil },
   ["@markup.list"] = { c.orange_glow, nil },
   -- ["@markup.link.label.markdown_inline"] = { c.red_kindling, nil },
