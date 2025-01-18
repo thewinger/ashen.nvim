@@ -28,7 +28,6 @@ M.map = {
 M.link = {
   FzfLuaTitle = "Title",
   FzfLuaCursor = "IncSearch",
-  FzfLuaFilePart = "FzfLuaFzfNormal",
   FzfLuaFzfCursorLine = "Visual",
 }
 
