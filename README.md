@@ -571,11 +571,15 @@ their respective folders.
 - WezTerm
 - foot
 
-### CLI Tools
+### CLI
 
 - bat
 - eza
 - lazygit
+
+### Environment
+
+- waybar
 
 ## Acknowledgements
 
