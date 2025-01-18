@@ -1,16 +1,21 @@
 local util = require("ashen.util")
 local M = {}
-local default_languages = {
-  -- "python",
-  "go",
-}
 
-local function get_languages(languages)
-  local out = {}
-  for _, language in ipairs(languages) do
-    table.insert(out, require("ashen.languages." .. language))
+---@type string[]
+local disabled = {}
+
+---Function reads plugin modules from plugin directory
+---@return table[]
+local function get_autoload_languages()
+  local sub = require("ashen.submodules")
+  local languages = {}
+  local names = sub.get_valid_integrations("languages")
+  for _, name in ipairs(names) do
+    if not util.is_in(disabled, name) then
+      table.insert(languages, require("ashen.languages." .. name))
+    end
   end
-  return out
+  return languages
 end
 
 local function setup_language(lang)
@@ -29,7 +34,7 @@ local function setup_language(lang)
 end
 
 M.load = function()
-  local languages = get_languages(default_languages)
+  local languages = get_autoload_languages()
 
   for _, lang in ipairs(languages) do
     if lang.lsp_attach then
