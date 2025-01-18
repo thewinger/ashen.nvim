@@ -33,6 +33,49 @@ M.normalize_hl = function(spec)
   return norm
 end
 
+---Recursively calls "callback" on all
+---values in given table.
+---@param tbl table
+---@param callback fun(k: any, v: any): any
+M.deep_traverse = function(tbl, callback)
+  for k, v in pairs(tbl) do
+    if type(v) == "table" then
+      M.deep_traverse(v, callback)
+    else
+      tbl[k] = callback(k, v)
+    end
+  end
+end
+
+---Function checks whether input matches
+---a hexadecimal color code.
+---@param str string
+---@return boolean
+M.is_hex = function(str)
+  local match = string.match(str, "^#[%w]+$")
+  if match then
+    return true
+  else
+    return false
+  end
+end
+
+---Function traverses highlight specs and converts
+---color names into hex codes.
+---@param spec HighlightSpec|HighlightNormalized
+M.hexify = function(spec)
+  local c = require("ashen.colors")
+  M.deep_traverse(spec, function(_, v)
+    if type(v) == "string" and not M.is_hex(v) then
+      local t = c[v]
+      if type(t) == "string" then
+        return t
+      end
+    end
+    return v
+  end)
+end
+
 -- This function sets the highlight groups
 -- via Neovim's API. Return value indicates success.
 ---@param name string
@@ -46,6 +89,7 @@ M.hl = function(name, spec)
   if not M.is_norm(spec) then
     spec = M.normalize_hl(spec)
   end
+  M.hexify(spec)
 
   -- check if transparency is enabled
   -- this is too costly to do on each hl, though
