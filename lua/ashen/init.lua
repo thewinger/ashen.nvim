@@ -11,6 +11,19 @@ M.setup = function(opts)
   state.opts = vim.tbl_deep_extend("force", state.opts, opts or {})
 end
 
+---Overrides the palette according to user opts
+local palette_override = function()
+  local opts = require("ashen.state").opts
+  if opts.colors == {} or not opts.colors then
+    return
+  end
+  local palette = require("ashen.colors")
+  local override = opts.colors or {}
+  for k, v in pairs(override) do
+    palette[k] = v
+  end
+end
+
 -- Load the theme
 M.load = function()
   local state = require("ashen.state")
@@ -27,8 +40,9 @@ M.load = function()
   vim.o.termguicolors = true
   -- palette must be overridden before theme is loaded for the first time
   -- could this be done in a better way?
-  require("ashen.util").palette_override()
-  require("ashen.theme").load()
+  palette_override()
+  local theme = require("ashen.theme")
+  theme.load()
   require("ashen.plugins").load()
   require("ashen.autocmds").load()
   require("ashen.languages").load()

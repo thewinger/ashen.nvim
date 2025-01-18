@@ -138,19 +138,6 @@ M.is_in = function(list, value)
   return false
 end
 
----Overrides the palette according to user opts
-M.palette_override = function()
-  local opts = require("ashen.state").opts
-  if opts.colors == {} or not opts.colors then
-    return
-  end
-  local palette = require("ashen.colors")
-  local override = opts.colors or {}
-  for k, v in pairs(override) do
-    palette[k] = v
-  end
-end
-
 ---@param map HighlightMap
 ---@param opts Options
 M.map_override = function(map, opts)
