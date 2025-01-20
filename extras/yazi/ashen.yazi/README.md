@@ -4,9 +4,8 @@
 
 ## 🎨 Installation
 
-```sh
-ya pack -a ficcdaf/ashen.nvim:extras/yazi/ashen.yazi
-```
+Please download the `ashen.yazi` folder and place it inside
+`~/.config/yazi/flavors/`.
 
 ## ⚙️ Usage
 
