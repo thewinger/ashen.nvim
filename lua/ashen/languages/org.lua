@@ -23,6 +23,7 @@ M.map = {
   ["@org.agenda.today"] = { "g_3", { bold = true } },
   ["@org.agenda.weekend"] = { "g_5" },
   ["@org.agenda.deadline"] = { "red_flame", { bold = true } },
+  ["@org.verbatim"] = { "g_2", "g_10" },
 }
 
 return M

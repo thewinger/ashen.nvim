@@ -8,6 +8,7 @@ M.map = {
   ["@markup.list"] = { c.orange_glow, nil },
   ["@markup.quote"] = { italic = true },
   ["@markup.math"] = { bold = true },
+  ["@markup.raw"] = { c.g_2, c.g_10 },
 }
 
 return M
