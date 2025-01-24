@@ -643,3 +643,10 @@ for a detailed roadmap.
 If you want a certain plugin or extra to be added, please open an issue and I'll
 get to it as soon as I can. If you want to contribute, please read the
 [contribution guidelines](/CONTRIBUTING.md).
+
+## Support My Work
+
+I'm a busy & broke graduate student doing my best to develop and maintain this
+plugin. If you feel that Ashen has added value to your Neovim experience, you
+may consider [buying me a coffee](https://ko-fi.com/ficcdaf). Your support is
+greatly appreciated but never expected. Thanks!
