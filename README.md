@@ -33,11 +33,12 @@ hints of teal.
 ## Features
 
 - Warm, cozy, muted palette that's easy on the eyes.
+- Incredibly fast load time.
 - Optional transparency.
 - Palette and highlight group overriding.
-- Customizable Neovim terminal palette.
+- Customizable terminal palette.
+- Extensive [plugin](#plugins) support.
 - [Extra themes](#extras) for other software.
-- [Plugin](#plugins) support.
 
 ## Installation
 
@@ -46,6 +47,9 @@ Using [lazy.nvim](https://lazy.folke.io/):
 ```lua
 {
   "ficcdaf/ashen.nvim",
+  -- optional but recommended,
+  -- pin to the latest stable release:
+  tag = "*",
   lazy = false,
   priority = 1000,
   -- configuration is optional!
@@ -55,11 +59,14 @@ Using [lazy.nvim](https://lazy.folke.io/):
 }
 ```
 
-You can load Ashen anywhere in your Neovim configuration:
+You can load Ashen anywhere in your Neovim configuration. You only need to call
+`setup` if you want to change any settings!
 
 ```lua
 vim.cmd("colorscheme ashen")
 -- You may call the load function as well
+-- Do NOT call them both; they both do
+-- the same thing!
 require("ashen").load()
 ```
 
@@ -68,7 +75,6 @@ If you're using [LazyVim](https://www.lazyvim.org/), I recommend the following:
 ```lua
 return {
   { "ficcdaf/ashen.nvim" },
-  -- Configure LazyVim to load Ashen
   {
     "LazyVim/LazyVim",
     opts = {
@@ -76,6 +82,16 @@ return {
     },
   }
 }
+```
+
+You can also configure `lazy.nvim` to use Ashen while installing plugins:
+
+```Lua
+require("lazy").setup({
+  install = {
+    colorscheme = {"ashen"}
+  }
+})
 ```
 
 ## Plugins
@@ -101,6 +117,7 @@ see [Plugin Configuration](#plugin-configuration) for more details.
 | neogit               |                        |
 | FzfLua               | X                      |
 | fzf.vim              |                        |
+| org-bullets.nvim     |                        |
 
 ## Configuration
 
