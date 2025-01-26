@@ -200,7 +200,6 @@ M.map = {
   SpellBad = { nil, nil, { undercurl = true } },
   SpellCap = { nil, nil, { undercurl = true } },
   String = { "red_glowing", nil },
-  LazySpecial = { "red_ember" },
 }
 
 M.link = {}

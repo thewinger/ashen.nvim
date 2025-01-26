@@ -118,6 +118,7 @@ see [Plugin Configuration](#plugin-configuration) for more details.
 | FzfLua               | X                      |
 | fzf.vim              |                        |
 | org-bullets.nvim     |                        |
+| lazy.nvim            |                        |
 
 ## Configuration
 
