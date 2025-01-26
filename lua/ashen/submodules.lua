@@ -85,23 +85,4 @@ M.load_submodule = function(integration, module)
   end
 end
 
----Load plugin integrations
--- M.load = function()
---   local p = require("ashen.state").opts.plugins
---   local plugins = {}
---   if p.autoload then
---     if #p.override > 0 and validate_override() then
---       disabled = util.list_merge(p.override, disabled)
---     end
---     plugins = get_autoload_plugins()
---   else
---     if #p.override > 0 and validate_override() then
---       plugins = p.override
---     end
---   end
---   for _, plugin in ipairs(plugins) do
---     M.load_submodule(plugin)
---   end
--- end
-
 return M
