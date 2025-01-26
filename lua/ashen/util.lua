@@ -109,12 +109,6 @@ M.hl = function(name, spec)
   if require("ashen.theme").transparent_bg[name] then
     spec.bg = nil
   end
-  -- -- Debugging output to verify the structure
-  -- for k, v in pairs(spec) do
-  --   if type(k) ~= "string" then
-  --     return false
-  --   end
-  -- end
   vim.api.nvim_set_hl(0, name, spec)
   return true
 end
