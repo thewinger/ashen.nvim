@@ -645,6 +645,10 @@ their respective folders.
 - waybar
 - sway
 
+### Web
+
+- Firefox
+
 ## Acknowledgements
 
 Ashen was inspired by
