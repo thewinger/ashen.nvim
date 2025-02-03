@@ -4,6 +4,7 @@
 # License: MIT
 
 export FZF_DEFAULT_OPTS="
+  $FZF_DEFAULT_OPTS
 	--color=fg:#a7a7a7
 	--color=fg+:#d5d5d5
 	--color=bg:#121212
@@ -19,4 +20,3 @@ export FZF_DEFAULT_OPTS="
 	--color=border:#a7a7a7
 	--color=query:#d5d5d5
 	--color=gutter:#121212"
-
