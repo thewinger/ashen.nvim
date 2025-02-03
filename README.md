@@ -638,6 +638,7 @@ their respective folders.
 - eza
 - lazygit
 - yazi
+- fzf
 
 ### Environment
 
