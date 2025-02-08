@@ -1,6 +1,6 @@
 # Ashen For Helix
 
-> [!WARN]
+> [!WARNING]
 > The Helix theme is still in beta! I recommend checking this repo for updates often. I'm still new to using Helix myself, so I'm certain I'll find ways to improve the theme.
 
 To install Ashen for Helix, please download the `ashen.toml` file 
