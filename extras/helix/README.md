@@ -29,5 +29,5 @@ color-modes = true
 undercurl = true
 [editor.indent-guides]
 render = true
-skil-levels = 1
+skip-levels = 1
 ```
