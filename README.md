@@ -11,8 +11,7 @@ hints of teal.
 
 <!-- prettier-ignore-start -->
 > [!WARNING]
-> This theme is still in early development: the palette and theming
-> may be subject to change.
+> This repository is being refactored, and all [extras](#extras) will eventually be moved to `ashen-org/theme`.
 <!-- prettier-ignore-end -->
 
 ## Contents
