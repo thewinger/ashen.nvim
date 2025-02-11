@@ -46,7 +46,7 @@ Using [lazy.nvim](https://lazy.folke.io/):
 
 ```lua
 {
-  "ficcdaf/ashen.nvim",
+  "ashen-org/ashen.nvim",
   -- optional but recommended,
   -- pin to the latest stable release:
   tag = "*",
