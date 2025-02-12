@@ -10,8 +10,11 @@ hints of teal.
 ![Lua, Python, and Go code in the Ashen theme.](assets/preview.png "Lua, Python, and Go code in the Ashen theme.")
 
 <!-- prettier-ignore-start -->
+
 > [!WARNING]
-> This repository is being refactored, and all [extras](#extras) will eventually be moved to `ashen-org/theme`.
+> All [extras](#extras) have been moved to [ashen-org/ashen](https://github.com/ashen-org/ashen).
+> They will eventually be removed from this repository.
+
 <!-- prettier-ignore-end -->
 
 ## Contents
@@ -27,6 +30,7 @@ hints of teal.
 - [Acknowledgements](#acknowledgements)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
+
 <!--toc:end-->
 
 ## Features
@@ -122,10 +126,12 @@ see [Plugin Configuration](#plugin-configuration) for more details.
 ## Configuration
 
 <!-- prettier-ignore-start -->
+
 > [!WARNING]
 > If you choose to set any options, please note that `setup` _only_
 > sets up the configuration and does **not** load the theme! You must call
 > `colorscheme ashen` or `require("ashen").load()` _after_ `setup`!
+
 <!-- prettier-ignore-end -->
 
 You can pass an options table to the `setup` function to configure Ashen, the
@@ -144,9 +150,11 @@ The default settings will work for most people. However, extensive configuration
 options are provided.
 
 <!-- prettier-ignore-start -->
+
 > [!TIP]
 > If you are not changing any of the defaults, avoid calling `setup` or
 > setting any `opts` -- your startup time will be faster!
+
 <!-- prettier-ignore-end -->
 
 All available settings, along with their default values, are listed below. User
@@ -238,8 +246,6 @@ opts = {
     italic_comments = true,
   },
 }
-
-
 ```
 
 ### Palette Override
@@ -267,9 +273,11 @@ opts = {
 </details>
 
 <!-- prettier-ignore-start -->
+
 > [!TIP]
 > Made a palette you're proud of? It could become Ashen's next "theme
 > variant" -- don't be afraid to open a feature request for it!
+
 <!-- prettier-ignore-end -->
 
 ### Highlight Override
@@ -458,8 +466,8 @@ behaviour, you can set `plugins.autoload` to `false`.
 
 <details>
 <summary>Exceptions</summary>
-  
-  - `trailblazer` needs to be loaded manually even if `plugins.autoload == true`.
+
+- `trailblazer` needs to be loaded manually even if `plugins.autoload == true`.
 
 </details>
 
@@ -613,43 +621,46 @@ opts = {
 
 ## Extras
 
-Ports of Ashen are available for a number of extra software. Links to them are available in the list below. For now, all extras are stored in this repo, but this may change in the future.
+Ashen is available for many other programs. Most Ashen ports can be found in the main repository, [ashen-org/ashen](https://github.com/ashen-org/ashen).
+Below, you can find **_some_, but not all** of them.
 
 <!-- prettier-ignore-start -->
-> [!TIP] 
+
+> [!TIP]
 > Missing an extra? Open an issue and request it, or try porting it
 > yourself!
+
 <!-- prettier-ignore-end -->
 
 ### Text Editors
 
-- [Helix](extras/helix)
+- [Helix](https://github.com/ashen-org/ashen/tree/main/helix)
 
 ### Terminal Emulators
 
-- [Ghostty](extras/ghostty)
-- [Kitty](extras/kitty)
-- [Alacritty](extras/alacritty)
-- [Windows Terminal](extras/windows-terminal)
-- [WezTerm](extras/wezterm)
-- [foot](extras/foot)
+- [Ghostty](https://github.com/ashen-org/ashen/tree/main/ghostty)
+- [Kitty](https://github.com/ashen-org/ashen/tree/main/kitty)
+- [Alacritty](https://github.com/ashen-org/ashen/tree/main/alacritty)
+- [Windows Terminal](https://github.com/ashen-org/ashen/tree/main/windows-terminal)
+- [WezTerm](https://github.com/ashen-org/ashen/tree/main/wezterm)
+- [foot](https://github.com/ashen-org/ashen/tree/main/foot)
 
 ### CLI
 
-- [bat](extras/bat)
-- [eza](extras/eza)
-- [lazygit](extras/lazygit)
-- [yazi](extras/yazi)
-- [fzf](extras/fzf)
+- [bat](https://github.com/ashen-org/ashen/tree/main/bat)
+- [eza](https://github.com/ashen-org/ashen/tree/main/eza)
+- [lazygit](https://github.com/ashen-org/ashen/tree/main/lazygit)
+- [yazi](https://github.com/ashen-org/ashen/tree/main/yazi)
+- [fzf](https://github.com/ashen-org/ashen/tree/main/fzf)
 
 ### Environment
 
-- [waybar](extras/waybar)
-- [sway](extras/sway)
+- [waybar](https://github.com/ashen-org/ashen/tree/main/waybar)
+- [sway](https://github.com/ashen-org/ashen/tree/main/sway)
 
 ### Web
 
-- [Firefox](extras/firefox)
+- [Firefox](https://github.com/ashen-org/ashen/tree/main/firefox)
 
 ## Acknowledgements
 
